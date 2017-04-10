@@ -33,15 +33,20 @@
 <!-- NAVBAR
 ================================================== -->
   <body>
-
+    <div class="time">
+      Tiempo: 5:00
+      <span></span>
+    </div>
 
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
-
+    <nav class="navbar navbar-default" style="padding: 5px; border-bottom: 2px solid #7A4478; border-radius: 0px;">
+      <img src="../../assets/img/inea.png" style="width: 65px; float: left;">
+      <h1 style="padding-left: 10px; float: left; color: #7A4478;">Exámen: Uso de la computadora</h1>
+    </nav>
     <div class="container marketing">
-      <h1>Exámen: Uso de la computadora</h1>
-      <h2><span style="font-weight: bold;">Unidad 1.</span> Identifica las partes de una computadora y cómo puedes aprender a usarla de manera sencilla.</h2>
+      <h2><span style="font-weight: bold; color: #7A4478;">Unidad 1.</span> Identifica las partes de una computadora y cómo puedes aprender a usarla de manera sencilla.</h2>
       
       <h3>1. Enciende la computadora de escritorio <small>(<ins><strong>Tip:</strong> son dos botones</ins>)</small>:</h3>
       <br>
@@ -49,7 +54,11 @@
         <!-- Three columns of text below the carousel -->
         <div class="row">
           <div class="col-lg-12 text-center">
-            <img src="../../assets/img/pc.png" alt="Generic placeholder image" width="300" height="180">
+            <img src="../../assets/img/pc.png" alt="desktop" width="300" height="180" usemap="#Map" onclick="desktop(false)">
+            <map name="Map">
+              <area shape="circle" coords="38,88,13" href="#" onclick="desktop(true)">
+              <area shape="circle" coords="249,114,6" href="#" onclick="desktop(true)">
+            </map>
           </div>
         </div><!-- /.row -->
 
@@ -59,16 +68,19 @@
         <!-- Three columns of text below the carousel -->
         <div class="row">
           <div class="col-lg-12 text-center">
-            <img src="../../assets/img/laptop.png" alt="Generic placeholder image" width="240" height="180">
+            <img src="../../assets/img/laptop.png" alt="Generic placeholder image" width="240" height="180" usemap="#Map2" onclick="laptop(false)">
+            <map name="Map2">
+              <area shape="circle" coords="204,119,7" href="#" onclick="laptop(true)">
+            </map>
           </div>
         </div><!-- /.row -->
 
-      <h3>Selecciona un ejemplo de monitor:</h3>
+      <h4>Selecciona un ejemplo de monitor:</h3>
       <br>
       <br>
         <!-- Three columns of text below the carousel -->
         <div class="row">
-          <div class="col-lg-3 text-center" onclick="javascript:alert('¡Fallaste!, intenta de nuevo')">
+          <div class="col-lg-3 text-center" onclick="q1(false)">
             <img src="../../assets/img/teclado.png" alt="Generic placeholder image" width="140" height="120">
             <div class="radio" style="margin-top: 2em;">
               <label>
@@ -76,7 +88,7 @@
               </label>
             </div>
           </div>
-          <div class="col-lg-3 text-center" onclick="javascript:alert('¡Correcto!')">
+          <div class="col-lg-3 text-center" onclick="q1(true)">
             <img src="../../assets/img/monitor.png" alt="Generic placeholder image" width="140" height="140">
             <div class="radio">
               <label>
@@ -84,7 +96,7 @@
               </label>
             </div>
           </div>
-          <div class="col-lg-3 text-center" onclick="javascript:alert('¡Fallaste!, intenta de nuevo')">
+          <div class="col-lg-3 text-center" onclick="q1(false)">
             <img src="../../assets/img/mouse.svg" alt="Generic placeholder image" width="140" height="140">
             <div class="radio">
               <label>
@@ -92,7 +104,7 @@
               </label>
             </div>
           </div>
-          <div class="col-lg-3 text-center" onclick="javascript:alert('¡Fallaste!, intenta de nuevo')">
+          <div class="col-lg-3 text-center" onclick="q1(false)">
             <img src="../../assets/img/cpu.png" alt="Generic placeholder image" width="110" height="140">
             <div class="radio">
               <label>
@@ -102,12 +114,12 @@
           </div>
         </div><!-- /.row -->
   
-      <h3>Selecciona un ejemplo de teclado:</h3>
+      <h4>Selecciona un ejemplo de teclado:</h3>
       <br>
       <br>
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-3 text-center" onclick="javascript:alert('¡Fallaste!, intenta de nuevo')">
+        <div class="col-lg-3 text-center" onclick="q2(false)">
           <img src="../../assets/img/monitor.png" alt="Generic placeholder image" width="140" height="140">
           <div class="radio">
               <label>
@@ -115,7 +127,7 @@
               </label>
             </div>
         </div>
-        <div class="col-lg-3 text-center" onclick="javascript:alert('¡Fallaste!, intenta de nuevo')">
+        <div class="col-lg-3 text-center" onclick="q2(false)">
           <img src="../../assets/img/mouse.svg" alt="Generic placeholder image" width="140" height="140">
           <div class="radio">
               <label>
@@ -123,7 +135,7 @@
               </label>
             </div>
         </div>
-        <div class="col-lg-3 text-center" onclick="javascript:alert('¡Fallaste!, intenta de nuevo')">
+        <div class="col-lg-3 text-center" onclick="q2(false)">
           <img src="../../assets/img/cpu.png" alt="Generic placeholder image" width="110" height="140">
           <div class="radio">
               <label>
@@ -131,7 +143,7 @@
               </label>
             </div>
         </div>
-        <div class="col-lg-3 text-center" onclick="javascript:alert('¡Correcto!')">
+        <div class="col-lg-3 text-center" onclick="q2(true)">
           <img src="../../assets/img/teclado.png" alt="Generic placeholder image" width="140" height="120">
           <div class="radio" style="margin-top: 2em;">
               <label>
@@ -141,12 +153,12 @@
         </div>
       </div><!-- /.row -->
 
-      <h3>Selecciona un ejemplo de ratón (Mouse):</h3>
+      <h4>Selecciona un ejemplo de ratón (Mouse):</h3>
       <br>
       <br>
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-3 text-center" onclick="javascript:alert('¡Correcto!')">
+        <div class="col-lg-3 text-center" onclick="q3(true)">
           <img src="../../assets/img/mouse.svg" alt="Generic placeholder image" width="140" height="140">
           <div class="radio">
               <label>
@@ -154,7 +166,7 @@
               </label>
             </div>
         </div>
-        <div class="col-lg-3 text-center" onclick="javascript:alert('¡Fallaste!, intenta de nuevo')">
+        <div class="col-lg-3 text-center" onclick="q3(false)">
           <img src="../../assets/img/teclado.png" alt="Generic placeholder image" width="140" height="120">
           <div class="radio" style="margin-top: 2em;">
               <label>
@@ -162,7 +174,7 @@
               </label>
             </div>
         </div>
-        <div class="col-lg-3 text-center" onclick="javascript:alert('¡Fallaste!, intenta de nuevo')">
+        <div class="col-lg-3 text-center" onclick="q3(false)">
           <img src="../../assets/img/monitor.png" alt="Generic placeholder image" width="140" height="140">
           <div class="radio">
               <label>
@@ -170,7 +182,7 @@
               </label>
             </div>
         </div>
-        <div class="col-lg-3 text-center" onclick="javascript:alert('¡Fallaste!, intenta de nuevo')">
+        <div class="col-lg-3 text-center" onclick="q3(false)">
           <img src="../../assets/img/cpu.png" alt="Generic placeholder image" width="110" height="140">
           <div class="radio">
               <label>
@@ -180,12 +192,12 @@
         </div>
       </div><!-- /.row -->
 
-      <h3>Selecciona un ejemplo de CPU (Unidad Central de Procesamiento):</h3>
+      <h4>Selecciona un ejemplo de CPU (Unidad Central de Procesamiento):</h3>
       <br>
       <br>
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-3 text-center" onclick="javascript:alert('¡Correcto!')">
+        <div class="col-lg-3 text-center" onclick="q4(true)">
           <img src="../../assets/img/cpu.png" alt="Generic placeholder image" width="110" height="140">
           <div class="radio">
               <label>
@@ -193,7 +205,7 @@
               </label>
             </div>
         </div>
-        <div class="col-lg-3 text-center" onclick="javascript:alert('¡Fallaste!, intenta de nuevo')">
+        <div class="col-lg-3 text-center" onclick="q4(false)">
           <img src="../../assets/img/mouse.svg" alt="Generic placeholder image" width="140" height="140">
           <div class="radio">
               <label>
@@ -201,7 +213,7 @@
               </label>
             </div>
         </div>
-        <div class="col-lg-3 text-center" onclick="javascript:alert('¡Fallaste!, intenta de nuevo')">
+        <div class="col-lg-3 text-center" onclick="q4(false)">
           <img src="../../assets/img/teclado.png" alt="Generic placeholder image" width="140" height="120">
           <div class="radio" style="margin-top: 2em;">
               <label>
@@ -209,7 +221,7 @@
               </label>
             </div>
         </div>
-        <div class="col-lg-3 text-center" onclick="javascript:alert('¡Fallaste!, intenta de nuevo')">
+        <div class="col-lg-3 text-center" onclick="q4(false)">
           <img src="../../assets/img/monitor.png" alt="Generic placeholder image" width="140" height="140">
           <div class="radio">
               <label>
@@ -219,57 +231,176 @@
         </div>
       </div><!-- /.row -->
 
+      <h3>4. ¿Qué es un Sistema Operativo?</h3>
+      <br>
+      <div class="row">
+        <div class="col-lg-4 text-center" onclick="q5(false)">
+          <div class="radio" style="text-align: left;">
+            <label>
+              <input type="radio" name="optionsRadios5" id="optionsRadios17" value="option17"> a)
+            </label>
+          </div>
+          <div style="text-align: justify;">
+            Conjunto de elementos físicos o materiales que constituyen una computadora o un sistema informático.
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" onclick="q5(true)">
+          <div class="radio" style="text-align: left;">
+            <label>
+              <input type="radio" name="optionsRadios5" id="optionsRadios18" value="option18"> b)
+            </label>
+          </div>
+          <div style="text-align: justify;">
+            Es el software principal o conjunto de programas de un sistema informático que gestiona los recursos de hardware y provee servicios a los programas de aplicación de software, ejecutándose en modo privilegiado respecto de los restantes
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" onclick="q5(false)">
+          <div class="radio" style="text-align: left;">
+            <label>
+              <input type="radio" name="optionsRadios5" id="optionsRadios19" value="option19"> c)
+            </label>
+          </div>
+          <div style="text-align: justify;">
+            Conjunto de programas y rutinas que permiten a la computadora realizar determinadas tareas.
+          </div>
+        </div>
+      </div><!-- /.row -->
+
+      <h3>5. ¿Qué es un ícono?</h3>
+      <br>
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4 text-center" onclick="q6(true)">
+          <div class="radio" style="text-align: justify;">
+            <label>
+              <input type="radio" name="optionsRadios6" id="optionsRadios20" value="option20"> a)
+            </label>
+          </div>
+          <div style="text-align: justify;">
+            Un pictograma que es utilizado para representar archivos, carpetas, programas, unidades de almacenamiento, etc. en un sistema operativo gráfico. Este puede representar cualquier cosa que los usuarios quieran: cualquier comando o proceso, o cualquier otro indicador.
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" onclick="q6(false)">
+          <div class="radio" style="text-align: justify;">
+            <label>
+              <input type="radio" name="optionsRadios6" id="optionsRadios21" value="option21"> b)
+            </label>
+          </div>
+          <div style="text-align: justify;">
+            Es la pantalla principal que podemos observar una vez que se inicializa el sistema operativo, es la pantalla que contiene los íconos de los programas que utilizamos más frecuentemente. El mismo se caracteriza además por mostrar un fondo de pantalla capaz de ser elegido por el usuario.
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" onclick="q6(false)">
+          <div class="radio" style="text-align: justify;">
+            <label>
+              <input type="radio" name="optionsRadios6" id="optionsRadios22" value="option22"> c)
+            </label>
+          </div>
+          <div style="text-align: justify;">
+            Es la acción de pulsar el botón del dispositivo apuntador (mouse) de la computadora. Como resultado de esta operación, el sistema aplica algún proceso o función al objeto señalado por el cursor o puntero en el momento de realizarla.
+          </div>
+        </div>
+      </div><!-- /.row -->
+
+      <h3>6. ¿Qué es el escritorio?</h3>
+      <br>
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4 text-center" onclick="q7(false)">
+          <div class="radio" style="text-align: justify;">
+            <label>
+              <input type="radio" name="optionsRadios7" id="optionsRadios24" value="option24"> a)
+            </label>
+          </div>
+          <div style="text-align: justify;">
+            Es la acción de pulsar el botón del dispositivo apuntador (mouse) de la computadora. Como resultado de esta operación, el sistema aplica algún proceso o función al objeto señalado por el cursor o puntero en el momento de realizarla.
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" onclick="q7(false)">
+          <div class="radio" style="text-align: justify;">
+            <label>
+              <input type="radio" name="optionsRadios7" id="optionsRadios23" value="option23"> b)
+            </label>
+          </div>
+          <div style="text-align: justify;">
+            Un pictograma que es utilizado para representar archivos, carpetas, programas, unidades de almacenamiento, etc. en un sistema operativo gráfico. Este puede representar cualquier cosa que los usuarios quieran: cualquier comando o proceso, o cualquier otro indicador.
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" onclick="q7(true)">
+          <div class="radio" style="text-align: justify;">
+            <label>
+              <input type="radio" name="optionsRadios7" id="optionsRadios25" value="option25"> c)
+            </label>
+          </div>
+          <div style="text-align: justify;">
+            Es la pantalla principal que podemos observar una vez que se inicializa el sistema operativo, es la pantalla que contiene los íconos de los programas que utilizamos más frecuentemente. El mismo se caracteriza además por mostrar un fondo de pantalla capaz de ser elegido por el usuario.
+          </div>
+        </div>
+      </div><!-- /.row -->
+
+      <h3>7. ¿Qué significa hacer clic?</h3>
+      <br>
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4 text-center" onclick="q8(true)">
+          <div class="radio" style="text-align: justify;">
+            <label>
+              <input type="radio" name="optionsRadios8" id="optionsRadios26" value="option26"> a)
+            </label>
+          </div>
+          <div style="text-align: justify;">
+            Es la pantalla principal que podemos observar una vez que se inicializa el sistema operativo, es la pantalla que contiene los íconos de los programas que utilizamos más frecuentemente. El mismo se caracteriza además por mostrar un fondo de pantalla capaz de ser elegido por el usuario.
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" onclick="q8(true)">
+          <div class="radio" style="text-align: justify;">
+            <label>
+              <input type="radio" name="optionsRadios8" id="optionsRadios27" value="option27"> b)
+            </label>
+          </div>
+          <div style="text-align: justify;">
+            Es la acción de pulsar el botón del dispositivo apuntador (mouse) de la computadora. Como resultado de esta operación, el sistema aplica algún proceso o función al objeto señalado por el cursor o puntero en el momento de realizarla.
+          </div>
+        </div>
+        <div class="col-lg-4 text-center" onclick="q8(false)">
+          <div class="radio" style="text-align: justify;">
+            <label>
+              <input type="radio" name="optionsRadios8" id="optionsRadios28" value="option28"> c)
+            </label>
+          </div>
+          <div style="text-align: justify;">
+            Un pictograma que es utilizado para representar archivos, carpetas, programas, unidades de almacenamiento, etc. en un sistema operativo gráfico. Este puede representar cualquier cosa que los usuarios quieran: cualquier comando o proceso, o cualquier otro indicador.
+          </div>
+        </div>
+      </div><!-- /.row -->
+
       <!-- START THE FEATURETTES -->
-      <hr class="featurette-divider">
-      
-
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#fallaste">
-        Fallaste
-      </button>
-
-      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#correcto">
-        Correcto
-      </button>
+      <hr class="divider">
       
       <div class="text-right">
         <a href="topic2.html">
-          <button type="button" class="btn btn-primary btn-lg">
+          <button type="button" class="btn btn-primary btn-lg" style="background-color: #7A4478;">
           Siguiente
           </button>
         </a>
       </div>
-
-      <!-- Modal -->
-      <div class="modal fade" id="fallaste" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">¡Fallaste!</h4>
-            </div>
-            <div class="modal-body">
-              <p>¡Fallaste!, vuelve a intentar y tendrás 0.75 puntos de esta pregunta</p>
-              <p>¡Fallaste!, vuelve a intentar y tendrás 0.50 puntos de esta pregunta</p>
-              <p>¡Fallaste!, vuelve a intentar y tendrás 0.25 puntos de esta pregunta</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
-            </div>
-          </div>
-        </div>
+      <br>
+      <div class="text-right">
+        <p class="pull-right"><a href="#">Ir a arriba para revisar tus RESULTADOS, antes de hacer click en siguiente.</a></p>
       </div>
+      <br>
+
 
       <!-- Modal -->
-      <div class="modal fade" id="correcto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal fade" id="modal-general" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">¡Correcto!</h4>
+              <h4 class="modal-title" id="modal-label" style="font-size: 26px; color: #7A4478;"></h4>
             </div>
             <div class="modal-body">
-              Obtuviste 1 punto por esta pregunta
+              <p id="modal-text"></p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
@@ -288,7 +419,6 @@
 
       <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">Ir a arriba para revisar tus respuestas.</a></p>
         <p>&copy; INEA, 2017. &middot; <a href="#">¿Dudas?</a> &middot; </p>
       </footer>
 
@@ -305,5 +435,7 @@
     <script src="../../assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- VALIDATE -->
+    <script src="../../assets/js/validate.js"></script>
   </body>
 </html>
